@@ -9,7 +9,8 @@
         "parser": "@typescript-eslint/parser"
     },
     "extends": [
-        "@nuxtjs/eslint-config-typescript"
+        "@nuxtjs/eslint-config-typescript",
+        "@unocss"
     ],
     "rules": {
         "indent": ["error", 4],
@@ -57,7 +58,8 @@
                 ],
                 "newlines-between": "always"
             }
-        ]
+        ],
+        "@unocss/blocklist": "warn"
     },
     "overrides": [
         {

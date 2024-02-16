@@ -22,4 +22,14 @@ export default defineNuxtConfig({
             },
         },
     },
+    css: ["~/assets/styles/global.scss"],
+    modules: [
+        "@unocss/nuxt",
+        "@nuxtjs/color-mode",
+    ],
+    colorMode: {
+        globalName: "__SNIPPEX_COLOR_MODE__",
+        classSuffix: "",
+        storageKey: "snippex-color-mode",
+    },
 });
