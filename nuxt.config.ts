@@ -26,10 +26,15 @@ export default defineNuxtConfig({
     modules: [
         "@unocss/nuxt",
         "@nuxtjs/color-mode",
+        "nuxt-svgo",
+        "nuxt-icon",
     ],
     colorMode: {
         globalName: "__SNIPPEX_COLOR_MODE__",
         classSuffix: "",
         storageKey: "snippex-color-mode",
+    },
+    svgo: {
+        autoImportPath: "~/assets",
     },
 });
