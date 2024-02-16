@@ -1,0 +1,56 @@
+{
+    "name": "snippex",
+    "version": "0.1.0",
+    "description": "A code presentation tool by XONE Labs, enabling developers to create captivating code presentations effortlessly.",
+    "author": "XONE Labs",
+    "license": "GPL-3.0",
+    "private": true,
+    "keywords": [
+        "snippex",
+        "code",
+        "editor",
+        "screenshots",
+        "nuxt",
+        "vue",
+        "presentation",
+        "snippets",
+        "open-source",
+        "xone-labs"
+    ],
+    "contributors": [
+        {
+            "name": "Denish Sharma",
+            "email": "denish@xubikle.com"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/xone-labs/snippex"
+    },
+    "bugs": {
+        "url": "https://github.com/xone-labs/snippex/issues"
+    },
+    "type": "module",
+    "engines": {
+        "node": ">=14.0.0"
+    },
+    "pnpm": true,
+    "scripts": {
+        "build": "nuxt build",
+        "dev": "nuxt dev",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare",
+        "lint": "eslint --ext .ts,.js,.vue --ignore-path .gitignore . --fix"
+    },
+    "devDependencies": {
+        "@nuxtjs/eslint-config-typescript": "^12.1.0",
+        "@typescript-eslint/parser": "^7.0.1",
+        "eslint": "^8.56.0",
+        "nuxt": "^3.10.2",
+        "typescript": "^5.3.3",
+        "vue": "^3.4.19",
+        "vue-router": "^4.2.5",
+        "vue-tsc": "^1.8.27"
+    }
+}

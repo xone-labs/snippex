@@ -1,0 +1,86 @@
+{
+    "root": true,
+    "env": {
+        "node": true,
+        "browser": true
+    },
+    "parser": "vue-eslint-parser",
+    "parserOptions": {
+        "parser": "@typescript-eslint/parser"
+    },
+    "extends": [
+        "@nuxtjs/eslint-config-typescript"
+    ],
+    "rules": {
+        "indent": ["error", 4],
+        "quotes": ["error", "double"],
+        "semi": ["error", "always"],
+        "comma-dangle": ["error", "always-multiline"],
+        "space-before-function-paren": [
+            "error",
+            {
+                "anonymous": "always",
+                "named": "never",
+                "asyncArrow": "always"
+            }
+        ],
+        "no-console": [
+            "warn",
+            {
+                "allow": [
+                    "info",
+                    "warn",
+                    "error"
+                ]
+            }
+        ],
+        "import/order": [
+            "error",
+            {
+                "alphabetize": {
+                    "order": "asc",
+                    "caseInsensitive": true
+                },
+                "groups": [
+                    [
+                        "external"
+                    ],
+                    [
+                        "parent",
+                        "internal",
+                        "builtin",
+                        "sibling",
+                        "index"
+                    ],
+                    "object",
+                    "type"
+                ],
+                "newlines-between": "always"
+            }
+        ]
+    },
+    "overrides": [
+        {
+            "files": ["*.vue"],
+            "rules": {
+                "vue/html-indent": ["error", 4]
+            }
+        },
+        {
+            "files": ["./server/**/*.ts"],
+            "rules": {
+                "no-console": [
+                    "error",
+                    {
+                        "allow": [
+                            "info",
+                            "warn",
+                            "trace",
+                            "error"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

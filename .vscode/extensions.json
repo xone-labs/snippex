@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "nuxtr.nuxtr-vscode",
+        "dbaeumer.vscode-eslint",
+        "editorconfig.editorconfig",
+        "vue.volar",
+        "vue.vscode-typescript-vue-plugin"
+    ]
+}
