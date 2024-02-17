@@ -1,3 +1,5 @@
+import { isProduction } from "std-env";
+
 import { resolve } from "path";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -11,7 +13,6 @@ export default defineNuxtConfig({
             htmlAttrs: {
                 lang: "en",
             },
-            title: "Snippex",
         },
     },
     typescript: {
@@ -28,6 +29,8 @@ export default defineNuxtConfig({
         "@nuxtjs/color-mode",
         "nuxt-svgo",
         "nuxt-icon",
+        "@nuxt/content",
+        "@nuxtjs/html-validator",
     ],
     colorMode: {
         globalName: "__SNIPPEX_COLOR_MODE__",
@@ -37,4 +40,30 @@ export default defineNuxtConfig({
     svgo: {
         autoImportPath: "~/assets",
     },
+    content: {
+        ignores: [
+            isProduction ? "playground/" : "",
+        ],
+        highlight: {
+            langs: [
+                "vue",
+                "javascript",
+                "typescript",
+                "bash",
+                "json",
+                "markdown",
+                "css",
+                "scss",
+                "yaml",
+                "html",
+                "jsx",
+                "tsx",
+            ],
+        },
+    },
+    ignore: [
+        isProduction ? "/pages/playground/**" : "",
+        isProduction ? "/content/playground/**" : "",
+        isProduction ? "/playground/**" : "",
+    ],
 });
