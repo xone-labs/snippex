@@ -15,6 +15,22 @@ export default defineConfig({
                     weights: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
                     italic: true,
                 },
+                fira: [
+                    {
+                        name: "Fira Code",
+                        weights: ["400", "500", "600", "700"],
+                        italic: true,
+                    },
+                    {
+                        name: "Fira Mono",
+                        weights: ["400", "500", "600", "700"],
+                        italic: true,
+                    },
+                    {
+                        name: "monospace",
+                        provider: "none",
+                    },
+                ],
             },
         }),
         presetTypography(),
