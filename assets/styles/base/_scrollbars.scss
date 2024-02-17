@@ -1,0 +1,11 @@
+@import "overlayscrollbars/styles/overlayscrollbars.css";
+
+.os-scrollbar {
+    --os-handle-perpendicular-size: 4px;
+
+    .os-scrollbar-track {
+        .os-scrollbar-handle {
+            @apply bg-gray-300 dark:bg-dark-100 rounded-full;
+        }
+    }
+}

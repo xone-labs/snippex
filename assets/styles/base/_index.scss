@@ -1,6 +1,7 @@
 @forward "variables";
 
 @import "@unocss/reset/tailwind-compat.css";
+@import "scrollbars";
 
 :root {
     font-size: 16px;
