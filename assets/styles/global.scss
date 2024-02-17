@@ -3,6 +3,7 @@
 body {
     @apply text-dark-700 font-normal bg-light-100 dark:(text-light-50 bg-dark-600);
     @apply m-0 p-0 overflow-x-hidden w-screen min-h-dvh h-dvh;
+    @apply font-sans;
 }
 
 #__nuxt {
