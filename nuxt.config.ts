@@ -31,6 +31,7 @@ export default defineNuxtConfig({
         "nuxt-icon",
         "@nuxt/content",
         "@nuxtjs/html-validator",
+        "@vueuse/nuxt",
     ],
     colorMode: {
         globalName: "__SNIPPEX_COLOR_MODE__",
