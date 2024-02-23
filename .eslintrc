@@ -59,13 +59,25 @@
                 "newlines-between": "always"
             }
         ],
-        "@unocss/blocklist": "warn"
+        "@unocss/blocklist": "warn",
+        "import/no-named-as-default": "off"
     },
     "overrides": [
         {
             "files": ["*.vue"],
             "rules": {
-                "vue/html-indent": ["error", 4]
+                "vue/html-indent": ["error", 4],
+                "vue/max-attributes-per-line": [
+                    "error",
+                    {
+                        "singleline": {
+                            "max": 6
+                        },
+                        "multiline": {
+                            "max": 2
+                        }
+                    }
+                ]
             }
         },
         {
