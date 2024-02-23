@@ -191,7 +191,7 @@ const initialCodes = {
         second: "const r = console.warn(\"Hello, New World\");",
     },
     complex: {
-        first: "if (3 > 4) {} else {}",
+        first: "if (3 > 4) {} elsea {}",
         second: "if (4 < 3) {\n    console.log('Hello');\n} else {\n    console.log('World');\n}",
     },
 };
@@ -340,13 +340,24 @@ watchImmediate([firstSnippetCode, secondSnippetCode, currentDiffMode], async ([f
                         const distanceY = secondCharRect.top - firstCharRect.top;
 
                         gsap.set(firstChar, {
-                            opacity: 0,
+                            opacity: 1,
                         });
 
                         gsap.set(secondChar, {
                             x: -distanceX,
                             y: -distanceY,
+                            opacity: 0,
                         });
+
+                        gsapTimeline.add(gsap.to(firstChar, {
+                            duration: 0.2,
+                            opacity: 0,
+                        }), 0);
+
+                        gsapTimeline.add(gsap.to(secondChar, {
+                            duration: 0.2,
+                            opacity: 1,
+                        }), 0);
 
                         gsapTimeline.add(gsap.to(secondChar, {
                             duration: 1,
