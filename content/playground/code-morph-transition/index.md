@@ -11,6 +11,8 @@ This demo depends on the following libraries:
 - [gsap](https://github.com/greensock/GSAP) - For animating the morphing of the code snippets.
 - [shiki](https://github.com/shikijs/shiki) - For syntax highlighting the code snippets.
 
+:CodeMorphTransitionFeatureDemoPlayground
+
 ## Interactive Demo
 
 Below is the playground that demonstrates the code morph transition. You can edit the code snippets and see the transition between them.
@@ -26,9 +28,9 @@ This is done using the `diff`{lang="bash"} library.
 
 We provide three ways to find the differences:
 
-- `diffChars()`{lang="javascript"} - Finds the differences at the character level.
-- `diffWordsWithSpace()`{lang="javascript"} - Finds the differences at the word level (including spaces).
-- `diffLines()`{lang="javascript"} - Finds the differences at the line level.
+- diffChars — Finds the differences at the character level.
+- diffWordsWithSpace() — Finds the differences at the word level (including spaces).
+- diffLines() — Finds the differences at the line level.
 
 You can see the diff preview in the interactive demo above. The differences are highlighted using color codes, where:
 
