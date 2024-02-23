@@ -1,4 +1,4 @@
-import { isProduction } from "std-env";
+import { isDevelopment, isProduction } from "std-env";
 
 import { resolve } from "path";
 
@@ -66,4 +66,12 @@ export default defineNuxtConfig({
         isProduction ? "/content/playground/**" : "",
         isProduction ? "/playground/**" : "",
     ],
+    build: {
+        transpile: isProduction ? ["naive-ui", "@css-render/vue3-ssr", "vueuc", "@juggle/resize-observer"] : ["@juggle/resize-observer"],
+    },
+    vite: {
+        optimizeDeps: {
+            include: isDevelopment ? ["naive-ui", "vueuc", "date-fns-tz/esm/formatInTimeZone"] : [],
+        },
+    },
 });

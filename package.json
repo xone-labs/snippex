@@ -44,6 +44,7 @@
         "lint": "eslint --ext .ts,.js,.vue --ignore-path .gitignore . --fix"
     },
     "devDependencies": {
+        "@css-render/vue3-ssr": "^0.15.12",
         "@nuxt/content": "^2.12.0",
         "@nuxtjs/color-mode": "^3.3.2",
         "@nuxtjs/eslint-config-typescript": "^12.1.0",
@@ -56,6 +57,7 @@
         "@unocss/reset": "^0.58.5",
         "consola": "^3.2.3",
         "eslint": "^8.56.0",
+        "naive-ui": "^2.38.0",
         "nuxt": "^3.10.2",
         "nuxt-icon": "^0.6.8",
         "nuxt-svgo": "^4.0.0",
